@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "819047415329",
+    "project_id": "vastra-3b300",
+    "storage_bucket": "vastra-3b300.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819047415329:android:23345ec7b2cce2cc57ed60",
+        "android_client_info": {
+          "package_name": "com.example.vastra"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxCEH5IGt-FZC2wyNr5qsmnMt_tw4ek0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Coustomer_Details">
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:id="@+id/tarnsactionType"
+        android:layout_height="wrap_content">
+    </Spinner>
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/Vendor"
+        android:layout_margin="20dp"
+        android:textAllCaps="true"
+        android:layout_height="wrap_content">
+    </TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/etDesign"
+        android:layout_margin="20dp"
+        android:hint="Enter the design no"
+        android:textAllCaps="true"
+        android:layout_height="wrap_content">
+    </EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:hint="Enter the no of diamonds"
+        android:layout_margin="20dp"
+        android:inputType="number"
+        android:id="@+id/diamonds"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:inputType="numberDecimal"
+        android:hint="Enter the Price of each"
+        android:id="@+id/price"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="Total will be displayed here"
+        android:id="@+id/calculateTotal"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:hint="Total"
+        android:id="@+id/total"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_width="match_parent"
+        android:text="SUBMIT"
+        android:layout_margin="20dp"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
