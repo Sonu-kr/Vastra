@@ -1,10 +1,12 @@
-package com.example.vastra;
+package com.example.vastra.Home;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.example.vastra.R;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -18,7 +20,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this, Coustomers.class);
+                Intent intent = new Intent(SplashActivity.this, WorkType.class);
                 startActivity(intent);
                 finish();
             }

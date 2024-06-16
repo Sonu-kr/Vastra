@@ -1,12 +1,10 @@
-package com.example.vastra;
+package com.example.vastra.JobWork;
 
 import static android.content.ContentValues.TAG;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.TypedValue;
@@ -16,25 +14,29 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.vastra.Coustomer_Details;
+import com.example.vastra.Coustomers;
+import com.example.vastra.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class Coustomers extends AppCompatActivity {
+public class AddVEndor extends AppCompatActivity {
+
     private LinearLayout container;
-    private Button addCoustomer;
-    private EditText etGetCoustomer;
+    private Button btnAddVendor;
+    private EditText etVendorName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_coustomers);
-        container = findViewById(R.id.container);
+        setContentView(R.layout.activity_add_vendor);
 
-        addCoustomer = findViewById(R.id.btnAddCoustomer);
-        etGetCoustomer = findViewById(R.id.etGetName);
+        container = findViewById(R.id.container);
+        btnAddVendor = findViewById(R.id.btnAddVendor);
+        etVendorName = findViewById(R.id.etVendorName);
 
         DatabaseReference myRef = FirebaseDatabase.getInstance().getReference("buttons");
 
@@ -56,20 +58,20 @@ public class Coustomers extends AppCompatActivity {
             }
         });
 
-        addCoustomer.setOnClickListener(new View.OnClickListener() {
+        btnAddVendor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String coustomerName = etGetCoustomer.getText().toString();
+                String coustomerName = etVendorName.getText().toString();
                 if (!coustomerName.isEmpty()) {
                     // Add the customer name to the Firebase database
-                    DatabaseReference myRef = FirebaseDatabase.getInstance().getReference("buttons").child(coustomerName);
+                    DatabaseReference myRef = FirebaseDatabase.getInstance().getReference("vendors").child(coustomerName);
                     myRef.setValue(coustomerName); // Set the value with the same name as the key
                     // Create the button with the same name
                     createButton(coustomerName);
-                    etGetCoustomer.setText(""); // Clear the input field after adding
+                    etVendorName.setText(""); // Clear the input field after adding
                 } else {
                     // Show a toast message if the input field is empty
-                    Toast.makeText(Coustomers.this, "Please enter a customer name", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddVEndor.this, "Please enter a customer name", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -90,7 +92,7 @@ public class Coustomers extends AppCompatActivity {
 
         // Set padding
         int paddingInDp = (int) getResources().getDimension(R.dimen.button_padding); // Change 'button_padding' to the resource ID of your padding dimension
-       // int paddingInDp = getResources().getDimensionPixelSize(R.dimen.button_padding);
+        // int paddingInDp = getResources().getDimensionPixelSize(R.dimen.button_padding);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT

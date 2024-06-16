@@ -3,65 +3,108 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5"
     tools:context=".Coustomer_Details">
+
     <Spinner
-        android:layout_width="match_parent"
-        android:layout_margin="20dp"
         android:id="@+id/tarnsactionType"
-        android:layout_height="wrap_content">
-    </Spinner>
-    <TextView
         android:layout_width="match_parent"
-        android:id="@+id/Vendor"
-        android:layout_margin="20dp"
-        android:textAllCaps="true"
-        android:layout_height="wrap_content">
-    </TextView>
-    <EditText
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/spinner_background"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:id="@+id/etDesign"
-        android:layout_margin="20dp"
-        android:hint="Enter the design no"
-        android:textAllCaps="true"
-        android:layout_height="wrap_content">
-    </EditText>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/Vendor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_marginEnd="8dp"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:padding="16dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/textview_background"/>
+
+        <TextView
+            android:id="@+id/Counter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textColor="#333333"
+            android:padding="16dp"
+            android:gravity="center"
+            android:background="@drawable/textview_background"/>
+    </LinearLayout>
 
     <EditText
+        android:id="@+id/etDesign"
         android:layout_width="match_parent"
-        android:hint="Enter the no of diamonds"
-        android:layout_margin="20dp"
-        android:inputType="number"
-        android:id="@+id/diamonds"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:hint="Enter the design no"
+        android:textAllCaps="true"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edittext_background"
+        android:padding="16dp"/>
+
     <EditText
+        android:id="@+id/diamonds"
         android:layout_width="match_parent"
-        android:layout_margin="20dp"
-        android:inputType="numberDecimal"
-        android:hint="Enter the Price of each"
+        android:layout_height="wrap_content"
+        android:hint="Enter the no of diamonds"
+        android:inputType="number"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edittext_background"
+        android:padding="16dp"/>
+
+    <EditText
         android:id="@+id/price"
-        android:layout_height="wrap_content"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the Price of each"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edittext_background"
+        android:padding="16dp"/>
+
     <Button
-        android:layout_width="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:hint="Total will be displayed here"
         android:id="@+id/calculateTotal"
-        android:layout_margin="20dp"
-        android:layout_height="wrap_content"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Calculate Total"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_background"/>
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_margin="20dp"
-        android:hint="Total"
         android:id="@+id/total"
-        android:layout_height="wrap_content"/>
-    <Button
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Total"
+        android:padding="16dp"
+        android:textColor="#333333"
+        android:textSize="20sp"
+        android:background="@drawable/textview_background"/>
+
+    <Button
+        android:id="@+id/submitData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="SUBMIT"
-        android:layout_margin="20dp"
-        android:gravity="center_horizontal"
-        android:layout_height="wrap_content"/>
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_background"/>
 </LinearLayout>

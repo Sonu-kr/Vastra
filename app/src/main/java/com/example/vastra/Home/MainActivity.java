@@ -1,10 +1,12 @@
-package com.example.vastra;
+package com.example.vastra.Home;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.LinearLayout;
+
+import com.example.vastra.R;
 
 public class MainActivity extends AppCompatActivity {
 

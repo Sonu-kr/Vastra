@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvCustomerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer Name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:background="@drawable/textview_background"/>
+
+        <TextView
+            android:id="@+id/tvTotalItemCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Sarees: 0"
+            android:textSize="16sp"
+            android:textColor="#616161"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/textview_background"
+            />
+
+        <TextView
+            android:id="@+id/tvTotalPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Price: Rs 0.00"
+            android:textSize="16sp"
+            android:textColor="#09C511"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/textview_background"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
